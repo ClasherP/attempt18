@@ -32,6 +32,35 @@ scene.add(ambientLight,pointLight)
 
 const controls = new OrbitControls(camera,renderer.domElement);
 
+function checkOrientation() {
+  //const warningScreen = document.getElementById("warning-screen");
+  //const content = document.getElementById("main-content");
+
+  if (window.innerHeight > window.innerWidth) {
+      // Portrait mode
+      //warningScreen.style.display = "flex"; // Show warning
+      //content.style.display = "none"; // Hide content
+
+      alert("Please switch to landscape mode and reload the page")
+
+  } else {
+      // Landscape mode
+      //warningScreen.style.display = "none"; // Hide warning
+      //content.style.display = "block"; // Show content
+      console.log("potraitn")
+
+  }
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+// Run on load
+checkOrientation();
+
+// Listen for orientation changes
+window.addEventListener("resize", checkOrientation);
+window.addEventListener("orientationchange", checkOrientation);
+
 function addStars(){
   const geometry = new THREE.SphereGeometry(0.25,24,24);
   const material = new THREE.MeshStandardMaterial({ color: 0xffffff})
