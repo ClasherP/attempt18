@@ -1,0 +1,145 @@
+pan/zoom
+view
+add node
+connect nodes
+edit
+delete tool
+undo
+
+
+sidebar menu
+2	load presets
+4	background
+		frontground 
+			background size
+			background image
+			background colour
+
+		background
+			background colour
+		
+3	graph
+		import graph
+		save graph
+		screenshot graph
+		reset graph
+		random
+			random weights
+			random nodes
+			random graph
+
+2	default settings
+		node size 
+		node outline colour
+		node fill colour
+		transparency
+		edge colour
+		edge enumeration
+
+1	algorithm
+		djykstra
+		Astar
+
+		show A* distance heuristic
+
+node edition
+	colour	
+	size
+	text
+	special
+	
+
+Graph Preset Menu
+
+small graph
+medium graph
+large graph
+massive graph
+world map graph
+town graph
+a* testing graph
+
+	
+
+	
+
+
+
+bottom left play/stop
+
+
+
+
+
+What is this -----------
+This is an interactive learning tool that lets people see how shortest path algorithms (like the ones computers use for maps and navigation) actually work.
+Basically, it’s like a visual sandbox for shortest path algorithms, turning abstract math into something you can click, watch, and experiment with.
+I built this to run entirely in the browser, so anyone can just try it with no installs or setup.
+
+What does this program do-
+This program helps you explore how computers figure out the fastest route between 2 points, like finding the quickest way through a maze. You can try out different built-in examples or build your own, and the program will instantly calculate the best path for you.
+
+How are maps represented in computers-
+Maps are represented in a data type called a graph. A graph in computer science is like a map made of dots (called nodes) and lines connecting them (called edges). The dots could represent cities, people, or places, and the lines show how they’re linked, like roads, railways, or flight paths. Each line can also have a weight, which tells you how long, costly, or difficult that connection is compared to others.
+This way, all unnecessary details are abstracted away, and the computer can focus only on the calculations needed to find the best path, which can then be displayed on a complex map.
+Graphs are how maps are represented in modern day computers and are what you'll be working with when you use my program.
+
+How do shortest path algorithms work-
+They work by exploring all possible routes and adding up the edge weights (like distance, time, or cost) of each edge between points. Dijkstra’s algorithm (the most well known) starts at one place and spreads outward, always choosing the cheapest road found so far, until it reaches the destination node. Other algorithms may add an extra heuristic value to each node, like straight line distance to the destination. This can speed things up by focusing on the most promising paths first.
+For a more in depth explanation, check out this YouTube video: <a href="https://www.youtube.com/watch?v=bZkzH5x0SKU"> https://www.youtube.com/watch?v=bZkzH5x0SKU <\a>
+
+How to create a graph --------
+All buttons can be found on the toolbar at the top of the screen.
+
+Adding nodes -
+You can create a node by pressing the "Add node" button. Then left-click inside the canvas, and nodes will spawn on your mouse pointer
+Linking nodes - 
+We link nodes with edges. Firstly, press the "connect Nodes" button and pick between a "directional edge" or a "nondirectional edge" (nondirectional edges allow for 2 way travel, directed edges are one way).
+After selecting the edge type, click on a node, and it should be highlighted in red. Then click on the node you want to link, and the 2 nodes will link together!
+Delete tool -
+Select the "delete" button. While selected, any node/edge that has been clicked will be deleted. Deleting a node also deletes any connected edges.
+Moving Nodes-
+Press the move button, then you can drag and drop nodes anywhere inside the canvas!
+Delete graph-
+If you've got a big graph that you want to delete all at once, you can navigate to the settings menu (by pressing the top left button with 3 lines). 
+Then, scroll down to Graph Settings and click on the "Reset Graph" header. Then press the red button, and this will reset the canvas.
+
+
+Editing the Nodes and Edges ---------
+Make sure the "edit" button in the toolbar is selected.
+
+Editing Nodes-
+With the "edit" button selected, click on any node, and a menu will appear in the bottom right of the screen. It has a range of edition options including the nodes: colour, name, size, type and custom heuristic value.
+
+Editing Edges-
+With the "edit" button selected, click on any edge, and a menu will appear in the bottom right of the screen. This will give the option to set the weight of the edge or to randomise the weight. You can change the colour of the edges in Settings> Customization Settings > Default edge colour.
+
+Main features -------------
+
+Running a shortest path algorithm-
+To find the shortest path between 2 points on your graph, make sure one node is set to the "starting node" type, and one node is set to the "destination node" type (to do this, select edit > click on a node > change "node type").
+Next, simply click the blue play button in the top left of the canvas, and the shortest path should be highlighted with algorithm information at the bottom of the screen.
+You can move, add, delete and edit the graph while it's running to see how your actions change the shortest path.
+To select a different algorithm, open the settings menu by clicking on the 3 lines in the top left corner and you should see the "Pathfinding Algorithm" settings. Click on the algorithm header and select your preferred algorithm.
+A* heuristic-
+The A* algorithm uses the node's heuristic number as well as edge weights to calculate the shortest path. By default, each node's heuristic will be its distance from the destination node.
+To use custom heuristic values instead, click on the settings button (three lines, top left corner), then click on the "A* Heuristic" header in the "Pathfinding Algorithm" section. Here, you can change the heuristic option.
+You can display each node's heuristic by going to settings > Pathfinding Algorithm > Show nodes A* Heuristic and changing the toggle to "show"
+pan/zoom - 
+To pan/zoom on canvas, select the pan/zoom button in the toolbar. While selected, you can pan by left-clicking and dragging your mouse across the canvas. To zoom in/out, you can use your mouse's scroll wheel to zoom in/out on your mouse cursor. Or you can click the view button and select a zoom % (this will also give you the option to recenter)
+Presets - Presets are pre-made graphs that show what you can make with this program. To load a preset, click on the settings button (top left, the 3 lines icon) and scroll down to the "graph presets menu". Then click on a button to load its corresponding graph. 
+Save/load-
+To save a graph, head over to settings (top left, the 3 lines icon) > graph settings and click on the "save graph" header. Then you can click on the "save current graph" button to download a .json file containing every node's links, positions and styles.
+To load a graph, head over to settings (top left, the 3 lines icon) > graph settings and click on the "load graph" header. Then press the button labeled "choose file" to select a .json file to load. Pressing the "submit" button will then load your saved graph onto the canvas. 
+random graph-
+To generate a random graph, head over to settings (top left, the 3 lines icon) > graph settings and click on the "generate random graph" header. Then you can select the number of nodes you want to have and generate the graph with the "generate" button.
+While this works, edges will overlap, and it may appear messy, so you may have to delete/move a few nodes to fix this. 
+
+Customisation ----------
+
+node customization -
+You can change the default style of the node to any colour scheme/style you'd like. To do this, head over to settings (top left, the 3 lines icon) > Customization Settings. Here, clicking on a header will give you the option to change the program's default colours and the default enumeration units.
+wallpaper colour -
+To change the colour of the foreground/background. Head over to settings (top left, the 3 lines icon) and scroll down to "Wallpaper customization", you can then click the "foreground colour"/"background colour" header to change their colours. Click on the "reset wallpaper" header to revert any changes.
+wallpaper image -
+To use an image as the foreground, head over to settings (top left, the 3 lines icon) and scroll down to "Wallpaper customization". Then, by clicking on the "Foreground image" header, you can choose a valid .img/.jpeg file to display, and click the "apply" button to load this image into the canvas. The image will keep its original dimensions. 
