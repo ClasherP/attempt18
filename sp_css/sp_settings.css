@@ -1,0 +1,468 @@
+.settings *{
+    text-wrap: nowrap;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(17, 17, 17);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+#settings_close {
+  padding: 8px 8px 8px 12px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+.settings a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.settings h2{
+    margin: 8px 8px 10px 22px;
+    text-decoration: none;
+    font-size: 40px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+    text-wrap: wrap;
+}
+
+.settings h4{
+    margin: 8px 8px 0px 22px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.settings a:hover {
+  color: #f1f1f19f;
+}
+#setting_header {
+    margin: 50px 8px 1px 22px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 1px solid #bfbfbf; 
+    text-wrap: wrap;
+}
+
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.settings{
+    background-color: rgb(17,17,17,0.99);
+    width: 270px;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    overflow-x: hidden;
+    flex-direction: column;
+    transition: 0.5s;
+    padding-top: 30px;
+}
+
+.settings .closebutton {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  
+}
+
+/* Chrome, Edge, Safari scrollbar styling */
+.settings::-webkit-scrollbar {
+  width: 12px; /* width of vertical scrollbar */
+}
+
+.settings::-webkit-scrollbar-track {
+  background: #f1f1f1; /* track color */
+}
+
+.settings::-webkit-scrollbar-thumb {
+  background: #888; /* handle color */
+  border-radius: 6px;
+}
+
+.settings::-webkit-scrollbar-thumb:hover {
+  background: #555; /* darker on hover */
+}
+
+/* Firefox scrollbar styling */
+.settings {
+  scrollbar-width: thin; /* auto, thin */
+  scrollbar-color: #888 rgb(17,17,17,0.99); /* thumb color, track color */
+}
+
+.settings p{
+    margin: 1px 8px 8px 22px;
+    text-decoration: none;
+    font-size: 13px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+    text-wrap: nowrap;
+}
+.settings_dropdown{
+    margin: 8px 8px 1px 22px;
+    color: #000000;
+    background-color: #ffffff;
+    font-size: 13px;
+        border: 3px solid #bfbfbf;
+    border-radius: 5px;
+    padding: 5;
+}
+
+.radio-types{
+    margin: 8px 8px 1px 22px;
+    border: 3px solid #bfbfbf;
+    border-radius: 5px;
+    padding: 5;
+    background-color: #ffffff;
+    font-size: 13px
+}
+
+/*radio button*/
+.container {
+    padding-left: 5;
+  display: block;
+  flex-direction: column;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 13px;
+  width: 13px;
+  background-color: #bfbfbf;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #bfbfbf;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: rgb(0,120,215);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 4px;
+	left: 4px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: white;
+}
+
+.reset_button_settings{
+    position: absolute;
+    right:6%;
+    font-size: 11;
+}
+
+#radius_text_settings{
+    display: flex;
+}
+
+.edit_element_settings{
+    border: 3px solid #555;
+    border-radius: 5px;
+    padding: 5;
+    font-size: 13px;
+    background-color: white;
+    margin: 8px 8px 1px 22px;
+}
+/*switch start*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider_settings {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #bfbfbf;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider_settings:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider_settings {
+  background-color: rgb(0,120,215);
+}
+
+input:focus + .slider_settings {
+  box-shadow: 0 0 1px rgb(0,120,215);
+}
+
+input:checked + .slider_settings:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider_settings.round {
+  border-radius: 34px;
+}
+
+.slider_settings.round:before {
+  border-radius: 50%;
+}
+/*switch end*/
+
+#show_toggle{
+  padding: 10;
+  padding-right: 15;
+}
+.maxwidth{
+    width: 100;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.default_colour_info{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.preset_row{
+  display: flex;
+  flex-direction: row;
+  padding: 5;
+  gap: 10px;
+}
+.preset_col{
+  display: flex;
+  flex-direction: column;
+  padding: 15;
+  gap: 0px;
+}
+.settings_style_button {
+    border: 3px solid #555;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 13px;
+    cursor: pointer;
+    justify-content: center;
+    align-items:center;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    padding: 5;
+
+}
+.reset_button_settings{
+    border: 3px solid #555;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 11px;
+    cursor: pointer;
+    justify-content: center;
+    align-items:center;
+    background: rgb(255, 255, 255);  
+}
+.reset_button_settings_header{
+    border: 3px solid #555;
+    margin-top: 70;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 11px;
+    cursor: pointer;
+    justify-content: center;
+    align-items:center;
+    background: rgb(255, 255, 255);
+    width: 40;
+    height: 20;
+}
+
+.reset_header{
+  display: flex; 
+  flex-direction: row;
+}
+
+.reset_button_settings_header:hover{
+  background: rgb(228, 249, 255);
+}
+.settings_style_button:hover{
+  background: rgb(228, 249, 255);
+}
+label:hover,
+.settings_style_button_tight:hover,
+.reset_button_settings:hover{
+  background: rgb(228, 249, 255);
+}
+.custom-file-upload {
+    border: 3px solid #555;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: flex;
+    cursor: pointer;
+    height: 30px;
+    background-color: white;
+    font-size: 13px;
+    width: 100%;
+    justify-content: center;
+    align-items:center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#submit-file{
+  width: 100%;
+}
+
+#fileOutput{
+  margin: 5;
+}
+
+.settings_style_button_tight{
+    border: 3px solid #555;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 13px;
+    cursor: pointer;
+    justify-content: center;
+    align-items:center;
+    background: rgb(255, 255, 255);
+    padding: 5;
+}
+
+.center{
+    padding: 5;
+    font-size: 13px;
+    margin: 8px 8px 1px 22px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.settings_graph_reset{
+      border: 3px solid rgb(180, 0, 0);
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 13px;
+    cursor: pointer;
+    justify-content: center;
+    align-items:center;
+    background: rgb(255, 255, 255);
+    padding: 5;
+}
+
+.edit_screen_coords{
+    width: 100%;
+    border: 3px solid #555;
+    border-radius: 5px;
+    padding: 5;
+    height: 30;
+}
+
+h5{
+  font-size: 13;
+}
+
+.center1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.end_of_page{
+  margin-bottom: 60;
+}
