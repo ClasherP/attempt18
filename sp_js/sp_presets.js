@@ -2032,7 +2032,7 @@ function returnPresetTemplate(name){
 }
             break
         case 'world':
-            getImageDataFromURL("https://i.imgur.com/3xJiJTK.png", "canvas_id")
+            getImageDataFromURL("https://ollietucker.com/worldmap.png", "canvas_id")
                 .then(image_dat => {
                     console.log(image_dat); // The actual object
                     image_dat.x = -128
@@ -2766,7 +2766,7 @@ function returnPresetTemplate(name){
     ]
 }
         case 'uk':
-            getImageDataFromURL("https://i.imgur.com/MSYThHS_d.webp?maxwidth=760&fidelity=grand", "canvas_id")
+            getImageDataFromURL("https://ollietucker.com/ukmap.jpg", "canvas_id")
                 .then(image_dat => {
                     console.log(image_dat); // The actual object
                     image_dat.x = 132
@@ -3602,4 +3602,5 @@ function returnPresetTemplate(name){
     ]
 }
 }
+
 }
