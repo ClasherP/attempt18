@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictate Chess - User Guide</title>
+
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: url("ollietucker.com/dictate-pics/board.png") no-repeat center center fixed;
+    background-size: cover;
+    color: #222;
+}
+
+        header {
+            background: #002f49;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #222;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: rgb(237, 237, 237);
+            border-radius: 10px;
+            flex:1;
+        }
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+        body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px); /* for Safari */
+    background: rgba(0,0,0,0.5); /* slight darken */
+    z-index: -1;
+}
+
+        h2 {
+            font-size: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-bottom: 2px;
+            margin-top: 40px;
+        }
+        h3 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-bottom: 2px;
+            margin-top: 30px;
+        }
+
+        code {
+            background: #eee;
+            padding: 3px 6px;
+            border-radius: 5px;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src = "ollietucker.com/dictate-pics/dictate_chess.png">
+</header>
+
+<nav>
+    <a href="#what">What is dictate chess</a>
+    <a href="#getting-started">Getting Started</a>
+    <a href="#commands">Voice Commands</a>
+    <a href="#troubleshooting">Troubleshooting</a>
+</nav>
+
+<div class="container">
+    
+    <section id="what">
+        <h2 style="margin-top:20px;">What is dictate chess</h2>
+        <p>Dictate chess is a chrome extention that allows you to play games on chess.com using voice commands. It is aimed to be an accessability tool and a tool to help with board vision/fimiliarity with chess notation. You can use this extention on: live games, bot games, analysis boards, puzzles</p>
+        <p>I regularly update this extention with requested features, so leave a review on the chrome web store and i will look at your feedback</p>
+        <p>This is not a chess engine and does not provide any competitive advantage. It is intended to be used on long form time control games like rapid/classical.</p>
+    </section>
+
+    <section id="getting-started">
+        <h2>Getting Started</h2>
+        <div style="    display: flex;flex-direction: row;">
+            <div style="    display: flex;flex-direction: column;">                
+                <p>To install the extention, download it from the chrome webstore at <a href="https://chromewebstore.google.com/detail/bkoiphbkkllonhekefljeahpamhggkip?utm_source=item-share-cb">this link</a> and pin the extention to the extention tab on chrome:</p>
+                <div style="    display: flex;flex-direction: row;">
+                    <img src="ollietucker.com/dictate-pics/s2.png"style="width:200px; border-radius:10px; border:5px solid black;margin:12px;">
+                    <p>Then to use the extention head to chess.com and press the top right icon highlighted in the picture. <br><br>It will then bring up the menu shown on the left, to turn on  voice control click the microphone button and it should turn red and say "listening".<br><br>Everything you say should then be transcribed and shown into the gray box below the button, if not then head over to the troubleshooting section.</p>
+                    
+                </div>
+            </div>
+            <img src="ollietucker.com/dictate-pics/s1.png"style="width:300px;height:250px; border-radius:10px; border:5px solid black;">
+        </div>
+        <p>You can now speak commands into your microphone (e.g knight f6) and the extention will move the pieces on the board without having to interact with the board yourself! To turn the microphone off, Click the microphone button and it should turn black and say "off"</p>
+    </section>
+
+    <section id="commands">
+        <h2>Voice Commands</h2>
+        <p>Voice command are the verbal commands you speak to the extention, all voice commands should appear in the gray box below the microphone button (which is usefull so if you have any issues, you can see what the computer thinks you said).<br><br>There are 4 types of commands you could use with this extention:</p>
+        <ul>
+            <li>Individual square commands</li>
+            <li>Double square commands</li>
+            <li>Piece-square commands</li>
+            <li>Special commands</li>
+        </ul>
+        <h3>Individual square commands</h3>
+        <p>Individual square commands simply press on the stated square, for example if you said "e5" the extention would click the e5 square.<br><br>This is usefull if your having issues with any of the other commands and need to click on one specific square to complete your move.</p>
+        
+        <h3>Double square commands</h3>
+        <p>Double square commands are like individual square commands but they involve saying 2 squares quickly one after anouther, for example if you said "e6 c4" the extention would click the e6 square then quickly click the c4 square.</p>
+
+        <h3>Piece-square commands</h3>
+        <p>Piece square commands involve saying a piece followed by the square you want to move it to, this is similar to traditional chess notation. For example, saying "knight c6" or "queen g8" would move the piece to the desired square. The extention should calculate each pieces legal moves to figure out which of the pieces you intend to move (if there are a few of the same pieces on the board).
+        <br><br>To differentiate the traditional pawn moves from the individual square commands (since you would usually just say the square), you'll have to say "pawn" followed by the square you want to move it to.<br><br>
+        In the event that multiple pieces can go to the same square, you'll have to use a double square command to specify what piece you'd like to move. The extention will also highlight those pieces so you realise that you need to specify the piece.
+        <br><br>You are able to premove if you speak fast enough but it's not recommended. 
+        </p>
+        <h3>Special commands</h3>
+        <p>Currently the only special commands are "long castle" and "short castle". <br><br>I am still working on implementing en paussant and pawn promotion, for the time being if you'd like to complete these moves please use the individual square commands.</p>
+
+    </section>
+
+    <section id="troubleshooting">
+        <h2>Troubleshooting</h2>
+        <p>If any of the below methods don't fix your problems, feel free to leave a chrome web store review or email me at rjtuck.75@gmail.com with the subject as "dictate chess".</p>
+        <h3>
+            Voice command are not getting picked up.
+        </h3>
+        <p>Firstly, to test if your microphone can be picked up by chrome go to <a href="https://mictests.com">this website</a> to check your microphone.</p>
+        <div style="    display: flex;flex-direction: row;">
+            <p>If you can hear yourself clearly, then it's an issue with the extention, but if you can't hear yourself clearly ensure go to your chrome settings and head over to the "site settings" tab. <br><br>
+                There you'll be able to configure a microphone to use with chrome. Additionally, make sure you select the "sites can ask to use your microphone" option.</p>
+            <img src="ollietucker.com/dictate-pics/s3.png"style="width:500px;height:250px; border-radius:10px; border:5px solid black;margin-left:10px;">
+        </div>
+
+        <h3>
+            I have to shout to use the extention
+        </h3>
+        <p>Unfortunatley, i havn't had the chance to implement a microphone sensitivity slider so for the time being you'll have to navigate to your control panel and turn your microphone sensitivity up manualy.<br><br> <a href="https://www.youtube.com/watch?v=LpQcdHpYdKo">
+            Click on this link
+        </a> for a youtube tutorial showing how you can turn your microphone sensitivity up.</p>
+    </section>
+<p><br><br><br><br>Thank you for using my chrome extention :D</p>
+</div>
+
+</body>
+<footer style = "background-color:#222;color:white;">
+    <p>
+        version: 2.0
+    </p>
+</footer>
+</html>
